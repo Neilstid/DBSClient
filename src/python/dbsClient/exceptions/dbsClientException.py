@@ -12,4 +12,4 @@ class dbsClientException(exceptions.Exception):
         self.message = message
 
     def __str__(self):
-        return repr(self.reason+': '+self.message)
+        return repr(self.reason + ': ' + self.message)
