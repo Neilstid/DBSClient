@@ -12,8 +12,8 @@ systems = \
   {
     'srcdir': 'src/python',
     'pythonmods': ['dbsClient.__init__'],
-    'pythonpkg': ['RestClient.apis',
-                  'RestClient.exceptions']
+    'pythonpkg': ['dbsClient.apis',
+                  'dbsClient.exceptions']
   }
 }
 
