@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+src/dbs.egg-info/PKG-INFO
+src/dbs.egg-info/SOURCES.txt
+src/dbs.egg-info/dependency_links.txt
+src/dbs.egg-info/top_level.txt

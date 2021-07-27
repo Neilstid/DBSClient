@@ -1,10 +1,10 @@
-from dbs.exceptions.dbsClientException import dbsClientException
+from dbsClient.exceptions.dbsClientException import dbsClientException
 from RestClient.ErrorHandling.RestClientExceptions import HTTPError
 from RestClient.RestApi import RestApi
 from RestClient.AuthHandling.X509Auth import X509Auth
 from RestClient.ProxyPlugins.Socks5Proxy import Socks5Proxy
 
-import cjson
+import json
 import os
 import socket
 import sys
@@ -224,7 +224,7 @@ class DbsApi(object):
 
         method_func = getattr(self.rest_api, callmethod.lower())
 
-        data = cjson.encode(data)
+        data = json.dumps(data)
 
         try:
             self.http_response = method_func(self.url, method, params, data, request_headers)
@@ -235,8 +235,8 @@ class DbsApi(object):
             return self.http_response.body
 
         try:
-            json_ret = cjson.decode(self.http_response.body)
-        except cjson.DecodeError:
+            json_ret=json.loads(self.http_response.body)
+        except ValueError as ex:
             print("The server output is not a valid json, most probably you have a typo in the url.\n%s.\n" % self.url, file=sys.stderr)
             raise dbsClientException("Invalid url", "Possible urls are %s" % self.http_response.body)
 
@@ -251,7 +251,7 @@ class DbsApi(object):
         data = http_error.body
         try:
             if isinstance(data, str):
-                data = cjson.decode(data)
+                data = json.loads(data)
         except:
             raise http_error
 
@@ -741,7 +741,7 @@ class DbsApi(object):
 
         checkInputParameter(method="listBlockOrigin", parameters=kwargs.keys(), validParameters=validParameters,
                             requiredParameters=requiredParameters)
-    return self.__callServer('blockorigin', params=kwargs)
+        return self.__callServer('blockorigin', params=kwargs)
 
     def listDatasets(self, **kwargs):
         """

@@ -1,2 +1,2 @@
-python-cjson==1.2.1
-pycurl==7.19.3
+dbs3-pycurl
+pycurl

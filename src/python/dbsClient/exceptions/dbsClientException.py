@@ -1,9 +1,8 @@
 """
 DBS Client Exception class
 """
-import exceptions
 
-class dbsClientException(exceptions.Exception):
+class dbsClientException(Exception):
 
     def __init__(self, reason, message):
         Exception.__init__(self)

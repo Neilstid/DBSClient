@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dbs
+Version: 3.4.4
+Summary: dbs client in py3
+Home-page: https://github.com/Neilstid/DBSClient
+Author: Neil Farmer
+Author-email: neil99.farmer@gmail.com
+Maintainer-email: hn-cms-dmDevelopment@cern.ch
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Neilstid/DBSClient/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+UNKNOWN
+

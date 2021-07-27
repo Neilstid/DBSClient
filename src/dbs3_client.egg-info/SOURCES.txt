@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+src/dbs3_client.egg-info/PKG-INFO
+src/dbs3_client.egg-info/SOURCES.txt
+src/dbs3_client.egg-info/dependency_links.txt
+src/dbs3_client.egg-info/top_level.txt
